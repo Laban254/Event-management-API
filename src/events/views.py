@@ -6,6 +6,8 @@ from django_filters.rest_framework import DjangoFilterBackend
 from .models import Event, Item, Participant, Bid, Scenario, Award, Attachment, Template, EventRule, EventLog
 from .serializers import EventSerializer, ItemSerializer, ParticipantSerializer, BidSerializer, ScenarioSerializer, AwardSerializer, AttachmentSerializer, TemplateSerializer, EventRuleSerializer, EventLogSerializer
 from .permissions import IsEventOwnerOrReadOnly
+from rest_framework.parsers import MultiPartParser
+
 
 class EventViewSet(viewsets.ModelViewSet):
     queryset = Event.objects.all()
@@ -109,6 +111,7 @@ class AwardViewSet(viewsets.ModelViewSet):
 class AttachmentViewSet(viewsets.ModelViewSet):
     queryset = Attachment.objects.all()
     serializer_class = AttachmentSerializer
+    parser_classes = [MultiPartParser]
 
 class TemplateViewSet(viewsets.ModelViewSet):
     queryset = Template.objects.all()
