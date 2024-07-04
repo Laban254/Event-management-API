@@ -1,11 +1,7 @@
-# urls.py
-from django.urls import path, include
-from rest_framework import routers
-from .views import GenerateTokenViewSet
-
-router = routers.DefaultRouter()
-router.register(r'generate-token', GenerateTokenViewSet, basename='generate-token')
+from django.urls import path
+from .views import UserRegistrationAPIView, UserLoginAPIView
 
 urlpatterns = [
-    path('', include(router.urls)),
+    path('register/', UserRegistrationAPIView.as_view(), name='user-register'),
+    path('login/', UserLoginAPIView.as_view(), name='user-login'),
 ]
