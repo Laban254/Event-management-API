@@ -6,6 +6,12 @@ from rest_framework.permissions import AllowAny
 from rest_framework_simplejwt.tokens import RefreshToken
 from .serializers import UserRegistrationSerializer, UserLoginSerializer
 
+from .schema_extensions import (
+    user_registration_view_schema, user_login_view_schema
+)
+
+
+@user_registration_view_schema
 class UserRegistrationAPIView(APIView):
     permission_classes = [AllowAny]
     serializer_class = UserRegistrationSerializer
@@ -17,10 +23,11 @@ class UserRegistrationAPIView(APIView):
             return Response({'message': 'User registered successfully'}, status=status.HTTP_201_CREATED)
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
+@user_login_view_schema
 class UserLoginAPIView(APIView):
     permission_classes = [AllowAny]
     serializer_class = UserLoginSerializer
-    
+
     def post(self, request):
         serializer = UserLoginSerializer(data=request.data)
         if serializer.is_valid():
@@ -33,5 +40,6 @@ class UserLoginAPIView(APIView):
                     'refresh': str(refresh),
                     'access': str(refresh.access_token),
                 })
+
             return Response({'error': 'Invalid credentials'}, status=status.HTTP_401_UNAUTHORIZED)
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
