@@ -144,12 +144,17 @@ REST_FRAMEWORK = {
 
 SPECTACULAR_SETTINGS = {
     'TITLE': 'Event Management API',
-    'DESCRIPTION': 'Event Management API',
+    'DESCRIPTION': 'A robust API for managing all aspects of events, from creation and participant registration to item management, bidding, awards, scenarios, attachments, templates, rules, and comprehensive event logging.',
     'VERSION': '1.0.0',
     'SERVE_INCLUDE_SCHEMA': False,
     'COMPONENT_SPLIT_REQUEST': True,
-    # OTHER SETTINGS
+    'EXTERNAL_DOCS': {
+        'url': 'https://example.com/docs',
+        'description': 'External Documentation'
+    },
+    # Add other relevant settings as needed
 }
+
 
 # JWT settings
 from datetime import timedelta

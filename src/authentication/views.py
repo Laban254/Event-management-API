@@ -5,11 +5,16 @@ from rest_framework.response import Response
 from rest_framework.permissions import AllowAny
 from rest_framework_simplejwt.tokens import RefreshToken
 from .serializers import UserRegistrationSerializer, UserLoginSerializer
+from django.http import HttpResponse
 
 from .schema_extensions import (
     user_registration_view_schema, user_login_view_schema
 )
 
+
+
+def welcome_view(request):
+    return HttpResponse("Welcome to Event Management API")
 
 @user_registration_view_schema
 class UserRegistrationAPIView(APIView):
