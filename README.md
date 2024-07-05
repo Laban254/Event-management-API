@@ -6,7 +6,7 @@ The Event Management API is a Django-based API for managing events, participants
 
   ### Diagram DB
   
-  [Event Mangement](https://github.com/user-attachments/files/16109878/Event.Mangement.pdf)
+  ![Event Mangement](./docs/eventSchema.png)
 
 ### Features
 
