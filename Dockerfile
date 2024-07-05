@@ -24,4 +24,4 @@ COPY . /app/
 EXPOSE 8000
 
 # Command to start Gunicorn and serve the Django application
-CMD ["gunicorn", "--bind", "0.0.0.0:8000", "src/eventManagementAPI.wsgi:application"]
+CMD ["gunicorn", "--bind", "0.0.0.0:8000", "src.eventManagementAPI.wsgi:application"]
