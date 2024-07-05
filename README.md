@@ -8,10 +8,32 @@ The Event Management API is a Django-based API for managing events, participants
   
   [Event Mangement](https://github.com/user-attachments/files/16109878/Event.Mangement.pdf)
 
+### Features
 
+-   **Events**: Create, manage, and track events with status (Draft, Published, etc.), dates, and descriptions.
+-   **Participants and Items**: Manage participants with contact details and items associated with events.
+-   **Bidding**: Track bids placed by participants, including amount, timestamp, and alternative status.
+-   **Scenarios and Awards**: Define scenarios, issue awards to participants with linked items and quantities.
+-   **Attachments**: Upload and manage event-related files with timestamps.
+-   **Templates and Rules**: Utilize templates with customizable rules stored as JSON.
+-   **Logs**: Track event-specific activities with messages and timestamps.
+- **User Registration**: Register new users.
+- **User Login**: Authenticate users and issue tokens.
+- **Token Refresh**: Refresh expired access tokens.
+
+### Testing with Live Endpoint
+
+To test the API with the live endpoint, please use the following resources:
+
+-   **Live Endpoint**: Access the live API at [event-management-api-vwio.onrender.com](https://event-management-api-vwio.onrender.com/).
+    
+-   **API Documentation**:
+    
+    -   **Swagger UI**: Interactively explore and test API endpoints at [event-management-api-vwio.onrender.com/api/schema/swagger-ui/](https://event-management-api-vwio.onrender.com/api/schema/swagger-ui/).
+    -   **Redoc**: View detailed API documentation at [event-management-api-vwio.onrender.com/api/schema/redoc/](https://event-management-api-vwio.onrender.com/api/schema/redoc/).
+-   **Quick Guide**: Before using the API, please read the [Quick Guide](./docs/QuickStart_guide.md) to get started.
 ## Installation
 
-  
 
 ### Using Docker
 
