@@ -148,12 +148,18 @@ SPECTACULAR_SETTINGS = {
     'VERSION': '1.0.0',
     'SERVE_INCLUDE_SCHEMA': False,
     'COMPONENT_SPLIT_REQUEST': True,
-    'EXTERNAL_DOCS': {
-        'url': 'https://example.com/docs',
-        'description': 'External Documentation'
-    },
-    # Add other relevant settings as needed
+    'EXTERNAL_DOCS': [
+        {
+            'url': 'ttps://github.com/Laban254',
+            'description': 'Laban Kibet'
+        },
+        {
+            'url': 'https://event-management-api-vwio.onrender.com/api/schema/redoc/',
+            'description': 'View detailed API documentation'
+        }
+    ],
 }
+
 
 
 # JWT settings
