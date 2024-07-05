@@ -110,6 +110,7 @@ class Template(models.Model):
 
     name = models.CharField(max_length=255)
     rules = models.JSONField()
+    event = models.ForeignKey(Event, related_name='templates', on_delete=models.CASCADE, null=True, blank=True)
 
     def __str__(self):
         return self.name
