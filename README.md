@@ -25,7 +25,7 @@ The Event Management API is a Django-based API for managing events, participants
 
 To test the API with the live endpoint, please use the following resources:
 
--   **Live Endpoint**: Access the live API at [event-management-api-vwio.onrender.com]https://event-management-api-m7wp.onrender.com).
+-   **Live Endpoint**: Access the live API at [event-management-api-vwio.onrender.com](https://event-management-api-m7wp.onrender.com).
     
 -   **API Documentation**:
     
