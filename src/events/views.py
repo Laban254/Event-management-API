@@ -20,8 +20,8 @@ from .schema_extensions import (
 )
 
 @event_viewset_schema
+@swagger_auto_schema(tags=['Event'])
 class EventViewSet(viewsets.ModelViewSet):
-    @swagger_auto_schema(tags=['Event'])
     queryset = Event.objects.all()
     serializer_class = EventSerializer
     permission_classes = [IsAuthenticated, IsEventOwnerOrReadOnly]
@@ -92,56 +92,56 @@ class EventViewSet(viewsets.ModelViewSet):
         return Response({'status': 'Event reopened'})
 
 @item_viewset_schema
+@swagger_auto_schema(tags=['Item'])
 class ItemViewSet(viewsets.ModelViewSet):
-    @swagger_auto_schema(tags=['Item'])
     queryset = Item.objects.all()
     serializer_class = ItemSerializer
 
 @participant_viewset_schema
+@swagger_auto_schema(tags=['Participant'])
 class ParticipantViewSet(viewsets.ModelViewSet):
-    @swagger_auto_schema(tags=['Participant'])
     queryset = Participant.objects.all()
     serializer_class = ParticipantSerializer
 
 @bid_viewset_schema
+@swagger_auto_schema(tags=['Bid'])
 class BidViewSet(viewsets.ModelViewSet):
-    @swagger_auto_schema(tags=['Bid'])
     queryset = Bid.objects.all()
     serializer_class = BidSerializer
 
 @scenario_viewset_schema
+@swagger_auto_schema(tags=['Scenario'])
 class ScenarioViewSet(viewsets.ModelViewSet):
-    @swagger_auto_schema(tags=['Scenario'])
     queryset = Scenario.objects.all()
     serializer_class = ScenarioSerializer
 
 @award_viewset_schema
+@swagger_auto_schema(tags=['Award'])
 class AwardViewSet(viewsets.ModelViewSet):
-    @swagger_auto_schema(tags=['Award'])
     queryset = Award.objects.all()
     serializer_class = AwardSerializer
 
 @attachment_viewset_schema
+@swagger_auto_schema(tags=['Attachment'])
 class AttachmentViewSet(viewsets.ModelViewSet):
-    @swagger_auto_schema(tags=['Attachment'])
     queryset = Attachment.objects.all()
     serializer_class = AttachmentSerializer
     parser_classes = [MultiPartParser]
 
 @template_viewset_schema
+@swagger_auto_schema(tags=['Template'])
 class TemplateViewSet(viewsets.ModelViewSet):
-    @swagger_auto_schema(tags=['Template'])
     queryset = Template.objects.all()
     serializer_class = TemplateSerializer
 
 @event_rule_viewset_schema
+@swagger_auto_schema(tags=['EventRule'])
 class EventRuleViewSet(viewsets.ModelViewSet):
-    @swagger_auto_schema(tags=['EventRule'])
     queryset = EventRule.objects.all()
     serializer_class = EventRuleSerializer
 
 @event_log_viewset_schema
+@swagger_auto_schema(tags=['EventLog'])
 class EventLogViewSet(viewsets.ModelViewSet):
-    @swagger_auto_schema(tags=['EventLog'])
     queryset = EventLog.objects.all()
     serializer_class = EventLogSerializer
