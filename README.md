@@ -25,12 +25,12 @@ The Event Management API is a Django-based API for managing events, participants
 
 To test the API with the live endpoint, please use the following resources:
 
--   **Live Endpoint**: Access the live API at [event-management-api-vwio.onrender.com](https://event-management-api-vwio.onrender.com/).
+-   **Live Endpoint**: Access the live API at [event-management-api-vwio.onrender.com]https://event-management-api-m7wp.onrender.com).
     
 -   **API Documentation**:
     
-    -   **Swagger UI**: Interactively explore and test API endpoints at [event-management-api-vwio.onrender.com/api/schema/swagger-ui/](https://event-management-api-vwio.onrender.com/api/schema/swagger-ui/).
-    -   **Redoc**: View detailed API documentation at [event-management-api-vwio.onrender.com/api/schema/redoc/](https://event-management-api-vwio.onrender.com/api/schema/redoc/).
+    -   **Swagger UI**: Interactively explore and test API endpoints at [event-management-api-vwio.onrender.com/api/schema/swagger-ui/](https://event-management-api-m7wp.onrender.com/api/schema/swagger-ui/).
+    -   **Redoc**: View detailed API documentation at [event-management-api-vwio.onrender.com/api/schema/redoc/](https://event-management-api-m7wp.onrender.com/api/schema/redoc/).
 -   **Quick Guide**: Before using the API, please read the [Quick Guide](./docs/QuickStart_guide.md) to get started.
 ## Installation
 
